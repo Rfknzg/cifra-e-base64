@@ -1,242 +1,140 @@
 * {
-
-  box-sizing: border-box;
-
   margin: 0;
-
   padding: 0;
-
+  box-sizing: border-box;
 }
-
 body {
-
-  text-align: center;
-
-  background-image: url(gif4.gif);
-
-  background-size: 100vh;
-
-}
-
-.roboto {
-
-  font-family: 'Roboto', sans-serif;
-
-  font-weight: 500;
-
-  font-size: 1.4rem;
-
-}
-
-.d-flex {
-
+  background-image: url("gif4.gif");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
   display: flex;
-
-}
-
-.j-center {
-
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-
 }
-
-.wrap {
-
-  flex-wrap: wrap;
-
+.cabecalho{
+  background-color: #ffbb00;
+  color: black;
+  margin-bottom: 150px;
 }
-
-.w-100 {
-
-  width: 100%;
-
-  color: white;
-
-}
-
-.w-40 {
-
-  width: 40vw;
-
-}
-
-.h-100 {
-
-  height: 100%;
-
-}
-
-.title-font {
-
-  font-family: 'Patua One', cursive;
-
-  font-weight: 400;
-
-  color: white;
-
-}
-
-h1 {
-
-  margin: 15vh 0 8vh 0;
-
-  font-size: 2.4rem;
-
-}
-
-h4 {
-
-  font-size: 1.5rem;
-
-}
-
-p {
-
-  margin-bottom: 4vh;
-
-}
-
-.message-box {
-
-  height: 7.65vh;
-
-  margin: 1% 0 2% 0;
-
-  padding: 1%;
-
-  font-weight: normal;
-
-  font-size: 1.2rem;
-
-  border: 1.5px solid #1AA6B7;
-
-  border-radius: 5px;
-
-  outline: none;
-
-  resize: none;
-
-  overflow: hidden;
-
-}
-
-.btn-style {
-
-  margin: 1%;
-
-  padding: 1.5%;
-
-  color: #fff;
-
-  background-color: #FE424D;
-
+fieldset {
   border: none;
-
-  border-radius: 5px;
-
-  cursor: pointer;
-
-  transition: 0.2s;
-
 }
-
-.btn-style:hover,
-
-.btn-style:focus {
-
-  background-color: #1AA6B7;
-
-  color: #fff;
-
-  outline: none;
-
-  transition: 0.3s;
-
+textarea {
+  resize: none;
+  height: 100px;
+  border-radius: 15px;
+  padding: 10px;
 }
-
-.btn-style:disabled {
-
-  background-color: rgb(145, 161, 163);
-
-  cursor: no-drop;
-
+legend {
+  text-align: center;
 }
-
-.result-container {
-
-  margin-top: 3%;
-
-  text-align: start;
-
+.metodo {
+  font-size: 16px;
+  margin-top: 6px;
+  background-color:#ffbb00;
 }
-
-.result-fixed-message {
-
-  color: #1ABCBD;
-
+.decoder {
+  background-color: rgba(0, 0, 0, 0.85);
+  width: 600px;
+  height: 550px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
-
-.result-text {
-
-  white-space: pre-wrap;
-
+.passo {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 24px;
+  width: 50%;
 }
-
-@media screen and (max-width: 1200px) {
-
-  .message-box,
-
-  .result-container {
-
-    width: 60vw;
-
+.tipo {
+  display: flex;
+  flex-direction: column;
+}
+.saida {
+  width: 80%;
+  height: 100px;
+  color: white;
+  word-wrap: break-word;
+}
+.enviar {
+  width: 150px;
+  height: 56px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  font-size: 15px;
+}
+.metodo,
+.tipo,
+.saida,
+.passo {
+  background-color:#ffbb00;
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+h2,
+label,
+legend,
+.metodo,
+output {
+  color: white;
+}
+.enviar {
+  font-size: smaller;
+}
+output {
+  font-family: sans-serif;
+  padding-top: 10px;
+  font-size: 20px;
+}
+option {
+  background-color:#ffbb00;
+}
+@media (max-width: 550px) {
+  body {
+    height: 110vh;
   }
-
-  .result-container {
-
-    margin-top: 5%;
-
+  .decoder {
+    width: 400px;
   }
-
-  .btn-style {
-
-    padding: 2%;
-
+  textarea {
+    width: 360px;
   }
-
 }
-
-@media screen and (max-width: 650px) {
-
-  .message-box,
-
-  .result-container {
-
-    width: 80vw;
-
+@media (max-width: 490px) {
+  body {
+    height: 122vh;
   }
-
-  .result-container {
-
-    margin-top: 10%;
-
+  .decoder {
+    width: 340px;
   }
-
-  .btn-style {
-
-    padding: 3%;
-
+  textarea {
+    width: 300px;
   }
-
 }
-
-header {
-
-  background-color: yellow;
-
-  margin-top: 0%;
-
-  padding-top: 0%;
-
+@media (max-width: 430px) {
+  footer {
+    display: none;
+  }
 }
-
+@media (max-width: 340px) {
+  body {
+    height: 125vh;
+    font-size: 8px;
+  }
+  .decoder {
+    width: 190px;
+  }
+  textarea {
+    width: 150px;
+  }
+  footer {
+    display: none;
+  }
+}

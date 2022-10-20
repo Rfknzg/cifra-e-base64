@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("../img/gif4.gif");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cabecalho{
+  background-color: #ffbb00;
+  color: black;
+  margin-bottom: 150px;
+}
+fieldset {
+  border: none;
+}
+textarea {
+  resize: none;
+  height: 100px;
+  border-radius: 15px;
+  padding: 10px;
+}
+legend {
+  text-align: center;
+}
+.metodo {
+  font-size: 16px;
+  margin-top: 6px;
+  background-color:#ffbb00;
+}
+.decoder {
+  background-color: rgba(0, 0, 0, 0.85);
+  width: 600px;
+  height: 550px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.passo {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 24px;
+  width: 50%;
+}
+.tipo {
+  display: flex;
+  flex-direction: column;
+}
+.saida {
+  width: 80%;
+  height: 100px;
+  color: white;
+  word-wrap: break-word;
+}
+.enviar {
+  width: 150px;
+  height: 56px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  font-size: 15px;
+}
+.metodo,
+.tipo,
+.saida,
+.passo {
+  background-color:#ffbb00;
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+h2,
+label,
+legend,
+.metodo,
+output {
+  color: white;
+}
+.enviar {
+  font-size: smaller;
+}
+output {
+  font-family: sans-serif;
+  padding-top: 10px;
+  font-size: 20px;
+}
+option {
+  background-color:#ffbb00;
+}
+@media (max-width: 550px) {
+  body {
+    height: 110vh;
+  }
+  .decoder {
+    width: 400px;
+  }
+  textarea {
+    width: 360px;
+  }
+}
+@media (max-width: 490px) {
+  body {
+    height: 122vh;
+  }
+  .decoder {
+    width: 340px;
+  }
+  textarea {
+    width: 300px;
+  }
+}
+@media (max-width: 430px) {
+  footer {
+    display: none;
+  }
+}
+@media (max-width: 340px) {
+  body {
+    height: 125vh;
+    font-size: 8px;
+  }
+  .decoder {
+    width: 190px;
+  }
+  textarea {
+    width: 150px;
+  }
+  footer {
+    display: none;
+  }
+}

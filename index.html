@@ -1,130 +1,74 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
-
-  
-
   <head>
-
-    <meta charset="utf-8">
-
-    <title>Cifra de César</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="https://fonts.googleapis.com/css?family=Patua+One|Roboto:400,500|Raleway:500,700" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="style.css">
-
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encoder/Decoder</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
+  <body>
+      <header class="cabecalho">
+          <h1>Bem vindo ao seu decodificador</h1>
+       </header>
+    <form class="decoder">
+      <h2>Encoder/Decoder</h2>
 
-  
+      <textarea
+        id="entrada"
+        cols="55"
+        rows="7"
+        required
+        placeholder=" Escreva aqui a sua mensagem..."
+      ></textarea>
 
-  <body class="roboto">
+      <fieldset>
+        <legend>Método</legend>
+        <select class="metodo" required>
+          <option>Escolha o método</option>
+          <option>Cifra de Cesar</option>
+          <option>Base 64</option>
+        </select>
+      </fieldset>
 
-    <header class="cabecalho">
-
-       <h1>Bem vindo ao seu decodificador</h1>
-
-    </header>
-
-    
-
-    <main class="d-flex j-center wrap">
-
-      
-
-      <h1 class="w-100 title-font">Criptografia / Descriptografia por Cifra de César</h1>
-
-      <p class="w-100">Insira a mensagem na caixa abaixo em "CP" para criptografar e "DP" para descriptografar:</p
-
-      
-
-      <div class="d-flex j-center w-100" id="message-container">
-
-      
-
-        <textarea type="text" id="message-box" class="message-box w-40 roboto" placeholder="Escreva sua mensagem aqui"></textarea>
-
-        
-
+      <div class="passo">
+        <input
+          id="chave"
+          type="range"
+          value="21"
+          min="1"
+          max="99"
+          oninput="this.nextElementSibling.value = this.value"
+        />
+        <output>21</output>
       </div>
 
-      
+      <fieldset class="tipo">
+        <div class="coddecod">
+          <input
+            type="radio"
+            name="coddecod"
+            value="msg-codigo"
+            id="codificar"
+            checked
+          />
+          <label for="codificar">Codificar</label>
+        </div>
+        <div class="cod-decod">
+          <input
+            type="radio"
+            name="coddecod"
+            value="codigo-msg"
+            id="decodificar"
+          />
+          <label for="decodificar">Decodificar</label>
+        </div>
+      </fieldset>
 
-      <div class="w-100">
+      <output class="saida"><p class="resposta"></p></output>
 
-        
-
-        <button class="btn-style roboto" id="cypher">CP</button>
-
-        <button class="btn-style roboto" id="decypher">DP</button>
-
-        
-
-      </div>
-
-      
-
-      <div class="result-container d-flex wrap j-center w-40" id="results"></div>
-
-   
-
-    </main>
-
-    
-
-    <main class="d-flex j-center wrap">
-
-      
-
-      <h1 class="w-100 title-font">Criptografia / Descriptografia por Base64</h1>
-
-      <p class="w-100">Insira a mensagem na caixa abaixo em "CP" para criptografar e "DP" para descriptografar:</p
-
-      
-
-      <div class="d-flex j-center w-100" id="message-container">
-
-      
-
-        <textarea type="text" id="message-box" class="message-box w-40 roboto" placeholder="Escreva sua mensagem aqui"></textarea>
-
-        
-
-      </div>
-
-      
-
-      <div class="w-100">
-
-        
-
-        <button class="btn-style roboto" id="cypher">CP</button>
-
-        <button class="btn-style roboto" id="decypher">DP</button>
-
-        
-
-      </div>
-
-      
-
-      <div class="result-container d-flex wrap j-center w-40" id="results"></div>
-
-   
-
-    </main>
-
-    
-
-    <script src= 'script.js'></script>
-
-    
-
+      <button class="enviar">Codificar Mensagem!</button>
+    </form>
+    <script src="script/script.js"></script>
   </body>
-
-  
-
 </html>
-
